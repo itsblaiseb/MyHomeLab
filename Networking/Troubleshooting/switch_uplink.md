@@ -1,6 +1,6 @@
 # Uplink Connectivity Issue – Cisco 2960XR
 
-**Date:** 2025-10-29  
+**Date:** 2025-10-28  
 **Device:** Cisco Catalyst WS-C2960XR-48LPD-I  
 **Hostname:** MainSwitch  
 **Related Devices:** Cisco RV320 Router (LAN2)  
