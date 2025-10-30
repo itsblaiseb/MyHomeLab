@@ -7,7 +7,7 @@
 
 ---
 
-## 🧰 Environment Overview
+## Environment Overview
 | Device | IP Address | Purpose |
 |--------|-------------|----------|
 | Cisco RV320 | 192.168.1.1 | Default Gateway |
@@ -28,7 +28,7 @@
 
 ---
 
-## 🧩 Key Commands Used
+## Key Commands Used
 ```bash
 hostname MainSwitch
 no ip domain-lookup
