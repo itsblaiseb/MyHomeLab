@@ -132,6 +132,6 @@ sudo fail2ban-client status sshd
 ---
 
 **Phase 1 Complete:**  
-Your Raspberry Pi now has a hardened baseline — secure SSH access, firewall protection, and automated intrusion prevention.
+Raspberry Pi now has a hardened baseline — secure SSH access, firewall protection, and automated intrusion prevention.
 
 Next up → **Phase 2 – Install Pi-hole & Unbound**, followed by **Phase 3 – VPN (WireGuard) Setup**.
