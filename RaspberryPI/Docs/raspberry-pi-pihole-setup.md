@@ -1,10 +1,10 @@
-# 🧱 Raspberry Pi Ad-Blocking Server with Pi-hole
+# Raspberry Pi Ad-Blocking Server with Pi-hole
 
 This document records my setup of a **Raspberry Pi 4** as a **network-wide ad blocker** using **Pi-hole**, with plans to later extend it into a **WireGuard VPN server**.
 
 ---
 
-## 🧰 Hardware & Environment
+## Hardware & Environment
 
 | Component | Details |
 |----------|---------|
@@ -19,7 +19,7 @@ This document records my setup of a **Raspberry Pi 4** as a **network-wide ad bl
 
 ---
 
-## ⚙️ 1. Initial System Setup
+## 1. Initial System Setup
 
 ### SSH Access
 From Windows (PowerShell/CMD):
@@ -43,7 +43,7 @@ Reconnect with SSH once it comes back up.
 
 ---
 
-## 🌍 2. Configure Networking (Bookworm/Trixie via NetworkManager)
+## 2. Configure Networking (Bookworm/Trixie via NetworkManager)
 
 Modern Raspberry Pi OS releases (Bookworm/Trixie) use **NetworkManager** instead of `dhcpcd`.
 
@@ -66,7 +66,7 @@ nmcli con show
 
 ---
 
-## 🧩 3. Install Pi-hole
+## 3. Install Pi-hole
 
 Run the official installer:
 ```bash
@@ -96,7 +96,7 @@ sudo pihole setpassword
 
 ---
 
-## 🌐 4. Access the Web Dashboard
+## 4. Access the Web Dashboard
 
 Open:
 ```
@@ -111,7 +111,7 @@ Log in with the password above (or the one you just set).
 
 ---
 
-## 🧱 5. Verify DNS Configuration
+## 5. Verify DNS Configuration
 
 Ensure the Pi itself uses Pi-hole for DNS:
 ```bash
@@ -127,7 +127,7 @@ If you see `0.0.0.0`, Pi-hole is actively blocking ads.
 
 ---
 
-## 📦 6. Update Blocklists (Gravity)
+## 6. Update Blocklists (Gravity)
 
 Rebuild the blocklist database:
 ```bash
@@ -155,7 +155,7 @@ sudo pihole -g
 
 ---
 
-## 🧪 7. Test Ad Blocking
+## 7. Test Ad Blocking
 
 ```bash
 dig doubleclick.net
@@ -164,7 +164,7 @@ Expected:
 ```
 doubleclick.net. IN A 0.0.0.0
 ```
-Ad domain successfully blocked ✅
+Ad domain successfully blocked
 
 ---
 
@@ -179,7 +179,7 @@ Save and reboot the router. Clients will pick up Pi-hole automatically.
 
 ---
 
-## 🔄 9. Maintenance
+## 9. Maintenance
 
 ### Update Pi-hole
 ```bash
@@ -203,7 +203,7 @@ Expected:
 
 ---
 
-## 🧰 10. Useful Commands
+## 10. Useful Commands
 
 | Task | Command |
 |------|--------|
@@ -215,19 +215,19 @@ Expected:
 
 ---
 
-## ✅ Current State
+## Current State
 
 | Component | Status |
 |----------|--------|
-| **Pi-hole DNS** | ✅ Active |
-| **Ad blocking** | ✅ Working (`doubleclick.net → 0.0.0.0`) |
-| **Web dashboard** | ✅ `http://192.168.1.101/admin` |
-| **Static IP** | ✅ NetworkManager |
-| **Wi‑Fi** | 🚫 Blocked (LAN only) |
+| **Pi-hole DNS** | Active |
+| **Ad blocking** | Working (`doubleclick.net → 0.0.0.0`) |
+| **Web dashboard** | `http://192.168.1.101/admin` |
+| **Static IP** | NetworkManager |
+| **Wi‑Fi** | Blocked (LAN only) |
 | **Next phase** | Integrate **WireGuard VPN** |
 
 ---
 
-## 📘 Next Step
+## Next Step
 
 **WireGuard VPN Integration** (coming next): route remote device traffic through the Pi so it benefits from Pi-hole filtering anywhere.
