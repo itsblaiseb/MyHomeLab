@@ -1,0 +1,627 @@
+Microsoft Windows [Version 10.0.26100.6899]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Cloudine>ssh pi@192.168.1.101
+The authenticity of host '192.168.1.101 (192.168.1.101)' can't be established.
+ED25519 key fingerprint is SHA256:hT4qbDSZ9eP2Y4+RywFSOHTHCywUipuYPxURF21rhqc.
+This host key is known by the following other names/addresses:
+    C:\Users\Cloudine/.ssh/known_hosts:82: blaise.local
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.1.101' (ED25519) to the list of known hosts.
+pi@192.168.1.101: Permission denied (publickey).
+
+C:\Users\Cloudine>ssh administrator@192.168.1.101
+Linux blaise 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+administrator@blaise:~ $ sudo raspi-config
+Generating locales (this might take a while)...
+  en_GB.UTF-8... done
+Generation complete.
+administrator@blaise:~ $ sudo reboot
+administrator@blaise:~ $ client_loop: send disconnect: Connection reset
+
+C:\Users\Cloudine>C:\Users\Cloudine>ssh administrator@192.168.1.101
+'C:\Users\Cloudine' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>Linux blaise 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+'Linux' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>
+C:\Users\Cloudine>The programs included with the Debian GNU/Linux system are free software;
+'The' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>the exact distribution terms for each program are described in the
+'the' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>individual files in /usr/share/doc/*/copyright.
+'individual' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>
+C:\Users\Cloudine>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+'Debian' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>permitted by applicable law.
+'permitted' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>
+C:\Users\Cloudine>Wi-Fi is currently blocked by rfkill.
+'Wi-Fi' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>Use raspi-config to set the country before use.
+'Use' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Cloudine>
+C:\Users\Cloudine>administrator@blaise:~ $
+The filename, directory name, or volume label syntax is incorrect.
+
+C:\Users\Cloudine>ssh administrator@192.168.1.101
+ssh: connect to host 192.168.1.101 port 22: Connection timed out
+
+C:\Users\Cloudine>ssh administrator@192.168.1.101
+Linux blaise 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct 30 07:17:39 2025 from 192.168.1.100
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+administrator@blaise:~ $ rfkill list all
+0: hci0: Bluetooth
+        Soft blocked: yes
+        Hard blocked: no
+1: phy0: Wireless LAN
+        Soft blocked: yes
+        Hard blocked: no
+administrator@blaise:~ $ sudo apt update && sudo apt upgrade -y
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://archive.raspberrypi.com/debian trixie InRelease [54.8 kB]
+Get:5 http://deb.debian.org/debian-security trixie-security/main armhf Packages [65.7 kB]
+Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [68.9 kB]
+Get:7 http://deb.debian.org/debian-security trixie-security/main Translation-en [44.7 kB]
+Get:8 http://deb.debian.org/debian-security trixie-security/non-free-firmware Translation-en [352 B]
+Get:9 http://archive.raspberrypi.com/debian trixie/main armhf Packages [351 kB]
+Get:10 http://archive.raspberrypi.com/debian trixie/main arm64 Packages [352 kB]
+Fetched 1,028 kB in 2s (438 kB/s)
+26 packages can be upgraded. Run 'apt list --upgradable' to see them.
+The following package was automatically installed and is no longer required:
+  libyuv0
+Use 'sudo apt autoremove' to remove it.
+
+Upgrading:
+  bluez-firmware  libpisp-common  openssl                  raspi-utils-core    rpi-eeprom        userconf-pi
+  libcamera-ipa   libpisp1        openssl-provider-legacy  raspi-utils-dt      rpi-loop-utils
+  libcamera0.5    librpicam-app1  raspberrypi-sys-mods     raspi-utils-eeprom  rpi-swap
+  libdtovl0       libssl3t64      raspi-config             raspi-utils-otp     rpicam-apps-core
+  libgpiolib0     libtiff6        raspi-utils              raspinfo            rpicam-apps-lite
+
+Summary:
+  Upgrading: 26, Installing: 0, Removing: 0, Not Upgrading: 0
+  Download size: 11.9 MB
+  Space needed: 12.8 MB / 55.6 GB available
+
+Get:1 http://deb.debian.org/debian-security trixie-security/main arm64 libtiff6 arm64 4.7.0-3+deb13u1 [325 kB]
+Get:2 http://archive.raspberrypi.com/debian trixie/main arm64 openssl-provider-legacy arm64 3.5.1-1+deb13u1+rpt1 [315 kB]
+Get:3 http://archive.raspberrypi.com/debian trixie/main arm64 libssl3t64 arm64 3.5.1-1+deb13u1+rpt1 [3,424 kB]
+Get:4 http://archive.raspberrypi.com/debian trixie/main arm64 bluez-firmware all 1.2-13+rpt2 [295 kB]
+Get:5 http://archive.raspberrypi.com/debian trixie/main arm64 libpisp1 arm64 1.3.0-1 [219 kB]
+Get:6 http://archive.raspberrypi.com/debian trixie/main arm64 libpisp-common all 1.3.0-1 [8,072 B]
+Get:7 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera0.5 arm64 0.5.2+rpt20250903-1+b1 [715 kB]
+Get:8 http://archive.raspberrypi.com/debian trixie/main arm64 libcamera-ipa arm64 0.5.2+rpt20250903-1+b1 [997 kB]
+Get:9 http://archive.raspberrypi.com/debian trixie/main arm64 libdtovl0 arm64 20251002-1 [28.4 kB]
+Get:10 http://archive.raspberrypi.com/debian trixie/main arm64 libgpiolib0 arm64 20251002-1 [39.4 kB]
+Get:11 http://archive.raspberrypi.com/debian trixie/main arm64 librpicam-app1 arm64 1.9.1-1 [208 kB]
+Get:12 http://archive.raspberrypi.com/debian trixie/main arm64 openssl arm64 3.5.1-1+deb13u1+rpt1 [1,556 kB]
+Get:13 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-utils-core arm64 20251002-1 [39.9 kB]
+Get:14 http://archive.raspberrypi.com/debian trixie/main arm64 rpi-eeprom all 28.6-1 [3,425 kB]
+Get:15 http://archive.raspberrypi.com/debian trixie/main arm64 raspinfo all 20251002-1 [8,466 B]
+Get:16 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-utils-otp all 20251002-1 [8,790 B]
+Get:17 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-utils-eeprom arm64 20251002-1 [26.1 kB]
+Get:18 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-utils-dt arm64 20251002-1 [52.1 kB]
+Get:19 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-utils all 20251002-1 [6,322 B]
+Get:20 http://archive.raspberrypi.com/debian trixie/main arm64 raspi-config all 20251027 [38.4 kB]
+Get:21 http://archive.raspberrypi.com/debian trixie/main arm64 raspberrypi-sys-mods arm64 1:20251028+1 [18.9 kB]
+Get:22 http://archive.raspberrypi.com/debian trixie/main arm64 rpi-loop-utils all 1.2.1 [7,728 B]
+Get:23 http://archive.raspberrypi.com/debian trixie/main arm64 rpi-swap all 1.2.1 [16.2 kB]
+Get:24 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-core arm64 1.9.1-1 [140 kB]
+Get:25 http://archive.raspberrypi.com/debian trixie/main arm64 rpicam-apps-lite all 1.9.1-1 [3,852 B]
+Get:26 http://archive.raspberrypi.com/debian trixie/main arm64 userconf-pi all 0.15 [7,308 B]
+Fetched 11.9 MB in 15s (796 kB/s)
+apt-listchanges: Reading changelogs...
+(Reading database ... 65918 files and directories currently installed.)
+Preparing to unpack .../openssl-provider-legacy_3.5.1-1+deb13u1+rpt1_arm64.deb ...
+Unpacking openssl-provider-legacy (3.5.1-1+deb13u1+rpt1) over (3.5.1-1+~rpt1) ...
+Setting up openssl-provider-legacy (3.5.1-1+deb13u1+rpt1) ...
+(Reading database ... 65918 files and directories currently installed.)
+Preparing to unpack .../libssl3t64_3.5.1-1+deb13u1+rpt1_arm64.deb ...
+Unpacking libssl3t64:arm64 (3.5.1-1+deb13u1+rpt1) over (3.5.1-1+~rpt1) ...
+Setting up libssl3t64:arm64 (3.5.1-1+deb13u1+rpt1) ...
+(Reading database ... 65918 files and directories currently installed.)
+Preparing to unpack .../00-bluez-firmware_1.2-13+rpt2_all.deb ...
+Unpacking bluez-firmware (1.2-13+rpt2) over (1.2-13+rpt1) ...
+Preparing to unpack .../01-libpisp1_1.3.0-1_arm64.deb ...
+Unpacking libpisp1:arm64 (1.3.0-1) over (1.2.1-2) ...
+Preparing to unpack .../02-libpisp-common_1.3.0-1_all.deb ...
+Unpacking libpisp-common (1.3.0-1) over (1.2.1-2) ...
+Preparing to unpack .../03-libcamera0.5_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera0.5:arm64 (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../04-libcamera-ipa_0.5.2+rpt20250903-1+b1_arm64.deb ...
+Unpacking libcamera-ipa:arm64 (0.5.2+rpt20250903-1+b1) over (0.5.2+rpt20250903-1) ...
+Preparing to unpack .../05-libdtovl0_20251002-1_arm64.deb ...
+Unpacking libdtovl0:arm64 (20251002-1) over (20250826-1) ...
+Preparing to unpack .../06-libgpiolib0_20251002-1_arm64.deb ...
+Unpacking libgpiolib0:arm64 (20251002-1) over (20250826-1) ...
+Preparing to unpack .../07-libtiff6_4.7.0-3+deb13u1_arm64.deb ...
+Unpacking libtiff6:arm64 (4.7.0-3+deb13u1) over (4.7.0-3) ...
+Preparing to unpack .../08-librpicam-app1_1.9.1-1_arm64.deb ...
+Unpacking librpicam-app1:arm64 (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../09-openssl_3.5.1-1+deb13u1+rpt1_arm64.deb ...
+Unpacking openssl (3.5.1-1+deb13u1+rpt1) over (3.5.1-1+~rpt1) ...
+Preparing to unpack .../10-raspi-utils-core_20251002-1_arm64.deb ...
+Unpacking raspi-utils-core (20251002-1) over (20250826-1) ...
+Preparing to unpack .../11-rpi-eeprom_28.6-1_all.deb ...
+Unpacking rpi-eeprom (28.6-1) over (28.5-1) ...
+Preparing to unpack .../12-raspinfo_20251002-1_all.deb ...
+Unpacking raspinfo (20251002-1) over (20250826-1) ...
+Preparing to unpack .../13-raspi-utils-otp_20251002-1_all.deb ...
+Unpacking raspi-utils-otp (20251002-1) over (20250826-1) ...
+Preparing to unpack .../14-raspi-utils-eeprom_20251002-1_arm64.deb ...
+Unpacking raspi-utils-eeprom (20251002-1) over (20250826-1) ...
+Preparing to unpack .../15-raspi-utils-dt_20251002-1_arm64.deb ...
+Unpacking raspi-utils-dt (20251002-1) over (20250826-1) ...
+Preparing to unpack .../16-raspi-utils_20251002-1_all.deb ...
+Unpacking raspi-utils (20251002-1) over (20250826-1) ...
+Preparing to unpack .../17-raspi-config_20251027_all.deb ...
+Unpacking raspi-config (20251027) over (20250918) ...
+Preparing to unpack .../18-raspberrypi-sys-mods_1%3a20251028+1_arm64.deb ...
+Unpacking raspberrypi-sys-mods (1:20251028+1) over (1:20250929) ...
+Preparing to unpack .../19-rpi-loop-utils_1.2.1_all.deb ...
+Unpacking rpi-loop-utils (1.2.1) over (1.2.0) ...
+Preparing to unpack .../20-rpi-swap_1.2.1_all.deb ...
+Unpacking rpi-swap (1.2.1) over (1.2.0) ...
+Preparing to unpack .../21-rpicam-apps-core_1.9.1-1_arm64.deb ...
+Unpacking rpicam-apps-core (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../22-rpicam-apps-lite_1.9.1-1_all.deb ...
+Unpacking rpicam-apps-lite (1.9.1-1) over (1.9.0-1) ...
+Preparing to unpack .../23-userconf-pi_0.15_all.deb ...
+Unpacking userconf-pi (0.15) over (0.14) ...
+Setting up bluez-firmware (1.2-13+rpt2) ...
+Setting up raspi-utils-eeprom (20251002-1) ...
+Setting up raspi-utils-otp (20251002-1) ...
+Setting up libdtovl0:arm64 (20251002-1) ...
+Setting up raspi-utils-dt (20251002-1) ...
+Setting up libpisp-common (1.3.0-1) ...
+Setting up libgpiolib0:arm64 (20251002-1) ...
+Setting up libtiff6:arm64 (4.7.0-3+deb13u1) ...
+Setting up libpisp1:arm64 (1.3.0-1) ...
+Setting up openssl (3.5.1-1+deb13u1+rpt1) ...
+Setting up raspi-utils-core (20251002-1) ...
+Setting up rpi-loop-utils (1.2.1) ...
+Setting up rpi-swap (1.2.1) ...
+Setting up raspinfo (20251002-1) ...
+Setting up raspi-utils (20251002-1) ...
+Setting up libcamera-ipa:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up libcamera0.5:arm64 (0.5.2+rpt20250903-1+b1) ...
+Setting up rpi-eeprom (28.6-1) ...
+Setting up raspi-config (20251027) ...
+Setting up librpicam-app1:arm64 (1.9.1-1) ...
+Setting up raspberrypi-sys-mods (1:20251028+1) ...
+Setting up rpicam-apps-core (1.9.1-1) ...
+Setting up userconf-pi (0.15) ...
+Setting up rpicam-apps-lite (1.9.1-1) ...
+Processing triggers for initramfs-tools (0.148.3+rpt2) ...
+update-initramfs: Generating /boot/initrd.img-6.12.47+rpt-rpi-v8
+'/boot/initrd.img-6.12.47+rpt-rpi-v8' -> '/boot/firmware/initramfs8'
+update-initramfs: Generating /boot/initrd.img-6.12.47+rpt-rpi-2712
+'/boot/initrd.img-6.12.47+rpt-rpi-2712' -> '/boot/firmware/initramfs_2712'
+Processing triggers for libc-bin (2.41-12+rpt1) ...
+Processing triggers for man-db (2.13.1-1) ...
+administrator@blaise:~ $ curl -sSL https://install.pi-hole.net | bash
+
+  [i] Root user check
+  [i] Script called with non-root privileges
+      The Pi-hole requires elevated privileges to install and run
+      Please check the installer for any concerns regarding this requirement
+      Make sure to download this script from a trusted source
+
+  [✓] Sudo utility check
+
+  [✓] Root user check
+
+        .;;,.
+        .ccccc:,.
+         :cccclll:.      ..,,
+          :ccccclll.   ;ooodc
+           'ccll:;ll .oooodc
+             .;cll.;;looo:.
+                 .. ','.
+                .',,,,,,'.
+              .',,,,,,,,,,.
+            .',,,,,,,,,,,,....
+          ....''',,,,,,,'.......
+        .........  ....  .........
+        ..........      ..........
+        ..........      ..........
+        .........  ....  .........
+          ........,,,,,,,'......
+            ....',,,,,,,,,,,,.
+               .',,,,,,,,,'.
+                .',,,,,,'.
+                  ..'''.
+
+  [i] SELinux not detected
+  [✓] Update local cache of available packages
+
+  [✓] Checking apt-get for upgraded packages... up to date!
+
+  [✓] Building dependency package pihole-meta.deb
+  [✓] Installing Pi-hole dependency package
+
+  [i] IPv4 address: 192.168.1.101/24
+  [i] Unable to find IPv6 ULA/GUA address
+  [i] IPv6 address:
+  [i] Using upstream DNS: Custom (8.8.8.8, 8.8.8.8)
+  [i] Installing StevenBlack's Unified Hosts List
+  [i] Query Logging on.
+  [i] Using privacy level: 0
+  [✗] Check for existing repository in /etc/.pihole
+  [i] Clone https://github.com/pi-hole/pi-hole.git into /etc/.pihole...HEAD is now at 1837b75 v6.2.2 (#6447)
+  [✓] Clone https://github.com/pi-hole/pi-hole.git into /etc/.pihole
+
+  [✗] Check for existing repository in /var/www/html/admin
+  [i] Clone https://github.com/pi-hole/web.git into /var/www/html/admin...HEAD is now at 62c55dc Pi-hole Web v6.3 (#3594)
+  [✓] Clone https://github.com/pi-hole/web.git into /var/www/html/admin
+
+  [✗] Checking for group 'pihole'
+  [✓] Creating group 'pihole'
+  [✓] Creating user 'pihole'
+
+  [i] FTL Checks...
+
+  [✓] Detected AArch64 (64 Bit ARM) architecture
+  [✓] Downloading and Installing FTL
+  [✓] Installing scripts from /etc/.pihole
+
+  [i] Installing configs from /etc/.pihole...
+
+  [✓] Installing latest Cron script
+
+  [✓] Installing latest logrotate script
+  [✓] man pages installed and database updated
+  [i] Testing if systemd-resolved is enabled
+  [i] Systemd-resolved is not enabled
+  [i] Restarting services...
+  [✓] Enabling pihole-FTL service to start on reboot...
+  [✓] Restarting pihole-FTL service...
+  [✓] DNS resolution is available
+
+  [✗] Migrating the list's cache directory to new location
+  [i] Creating new gravity database
+  [i] Migrating content of /etc/pihole/adlists.list into new database
+  [✓] Deleting existing list cache
+  [i] Neutrino emissions detected...
+
+  [✓] Preparing new gravity database
+  [✓] Creating new gravity databases
+  [✓] Pulling blocklist source list into range
+  [i] Using libz compression
+
+  [i] Target: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  [✓] Status: Retrieval successful
+  [✓] Parsed 101221 exact domains and 0 ABP-style domains (blocking, ignored 1 non-domain entries)
+      Sample of non-domain entries:
+        - fe80::1%lo0
+
+  [✓] Building tree
+  [i] Number of gravity domains: 101221 (101221 unique domains)
+  [i] Number of exact denied domains: 0
+  [i] Number of regex denied filters: 0
+  [i] Number of exact allowed domains: 0
+  [i] Number of regex allowed filters: 0
+  [✓] Optimizing database
+  [✓] Swapping databases
+  [✓] The old database remains available
+  [✓] Cleaning up stray matter
+
+  [✓] Done.
+
+  [i] You may now configure your devices to use the Pi-hole as their DNS server
+  [i] Pi-hole DNS (IPv4): 192.168.1.101
+  [i] If you have not done so already, the above IP should be set to static.
+  [i] View the web interface at http://pi.hole:80/admin or http://192.168.1.101:80/admin
+
+  [i] Web Interface password: MzwQzkJR
+  [i] This can be changed using 'pihole setpassword'
+
+  [i] To allow your user to use all CLI functions without authentication, refer to
+    our documentation at: https://docs.pi-hole.net/main/post-install/
+
+
+  [i] The install log is located at: /etc/pihole/install.log
+  [✓] Installation complete!
+administrator@blaise:~ $ client_loop: send disconnect: Connection reset
+
+C:\Users\Cloudine>ssh administrator@192.168.1.101
+Linux blaise 6.12.47+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct 30 07:23:03 2025 from 192.168.1.100
+
+Wi-Fi is currently blocked by rfkill.
+Use raspi-config to set the country before use.
+
+administrator@blaise:~ $ nslookup doubleclick.net
+Server:         192.168.1.1
+Address:        192.168.1.1#53
+
+Non-authoritative answer:
+Name:   doubleclick.net
+Address: 142.251.40.46
+Name:   doubleclick.net
+Address: 2607:f8b0:4007:819::200e
+
+administrator@blaise:~ $ dig doubleclick.net
+
+; <<>> DiG 9.20.15-1~deb13u1-Debian <<>> doubleclick.net
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28106
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;doubleclick.net.               IN      A
+
+;; ANSWER SECTION:
+doubleclick.net.        280     IN      A       142.251.40.46
+
+;; Query time: 0 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1) (UDP)
+;; WHEN: Thu Oct 30 08:23:48 GMT 2025
+;; MSG SIZE  rcvd: 49
+
+
+
+administrator@blaise:~ $ sudo service dhcpcd restart
+Failed to restart dhcpcd.service: Unit dhcpcd.service not found.
+administrator@blaise:~ $ sudo service dhcpcd restart
+Failed to restart dhcpcd.service: Unit dhcpcd.service not found.
+administrator@blaise:~ $ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 2c:cf:67:03:c5:6c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.101/24 brd 192.168.1.255 scope global dynamic noprefixroute eth0
+       valid_lft 82547sec preferred_lft 82547sec
+    inet6 fe80::499b:a9e5:ca2b:ab7d/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: wlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 2c:cf:67:03:c5:6d brd ff:ff:ff:ff:ff:ff
+administrator@blaise:~ $ sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.101/24 ipv4.gateway 192.168.1.1 ipv4.dns "127.0.0.1" ipv4.method manual
+administrator@blaise:~ $ ^C
+administrator@blaise:~ $ sudo nmcli con down "Wired connection 1" && sudo nmcli con up "Wired connection 1"
+Connection 'Wired connection 1' successfully deactivated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/2)
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+administrator@blaise:~ $ nmcli con show
+NAME                UUID                                  TYPE      DEVICE
+Wired connection 1  5ced0bb2-29e2-3f78-bfd5-f3bdb907ba2c  ethernet  eth0
+lo                  507bcdd2-0431-4445-9c28-2c8c845b3cb1  loopback  lo
+administrator@blaise:~ $ dig doubleclick.net
+
+; <<>> DiG 9.20.15-1~deb13u1-Debian <<>> doubleclick.net
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48536
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;doubleclick.net.               IN      A
+
+;; ANSWER SECTION:
+doubleclick.net.        300     IN      A       142.250.72.174
+
+;; Query time: 59 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Thu Oct 30 08:27:29 GMT 2025
+;; MSG SIZE  rcvd: 60
+
+administrator@blaise:~ $ pihole -g
+  [✗] This Pi-hole command requires root privileges, try:
+      sudo pihole -g
+administrator@blaise:~ $ sudo ..
+sudo: ..: command not found
+administrator@blaise:~ $ sudo pihole -g
+  [✓] DNS resolution is available
+
+  [i] Neutrino emissions detected...
+
+  [✓] Preparing new gravity database
+  [✓] Creating new gravity databases
+  [✓] Pulling blocklist source list into range
+  [i] Using libz compression
+
+  [i] Target: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  [✓] Status: No changes detected
+  [✓] Parsed 101221 exact domains and 0 ABP-style domains (blocking, ignored 1 non-domain entries)
+      Sample of non-domain entries:
+        - fe80::1%lo0
+
+  [✓] Building tree
+  [i] Number of gravity domains: 101221 (101221 unique domains)
+  [i] Number of exact denied domains: 0
+  [i] Number of regex denied filters: 0
+  [i] Number of exact allowed domains: 0
+  [i] Number of regex allowed filters: 0
+  [✓] Optimizing database
+  [✓] Swapping databases
+  [✓] The old database remains available
+  [✓] Cleaning up stray matter
+
+  [✓] Done.
+administrator@blaise:~ $ dig doubleclick.net
+
+; <<>> DiG 9.20.15-1~deb13u1-Debian <<>> doubleclick.net
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 34825
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;doubleclick.net.               IN      A
+
+;; ANSWER SECTION:
+doubleclick.net.        2       IN      A       0.0.0.0
+
+;; Query time: 7 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Thu Oct 30 08:29:14 GMT 2025
+;; MSG SIZE  rcvd: 60
+
+administrator@blaise:~ $ pihole -a -p
+Usage: pihole [options]
+Example: 'pihole allow -h'
+Add '-h' after specific commands for more information on usage
+
+Domain Options:
+  allow, allowlist    Allow domain(s)
+  deny, denylist      Deny domain(s)
+  --regex, regex      Regex deny domains(s)
+  --allow-regex       Regex allow domains(s)
+  --wild, wildcard    Wildcard deny domain(s)
+  --allow-wild        Wildcard allow domain(s)
+                        Add '-h' for more info on allow/deny usage
+
+Debugging Options:
+  -d, debug           Start a debugging session
+                        Add '-c' or '--check-database' to include a Pi-hole database integrity check
+                        Add '-a' to automatically upload the log to tricorder.pi-hole.net
+  -f, flush           Flush the Pi-hole log
+  -r, repair          Repair Pi-hole subsystems
+  -t, tail [arg]      View the live output of the Pi-hole log.
+                      Add an optional argument to filter the log
+                      (regular expressions are supported)
+  api <endpoint>      Query the Pi-hole API at <endpoint>
+                        Precede <endpoint> with 'verbose' option to show authentication and status messages
+
+
+Options:
+  setpassword [pwd]   Set the password for the web interface
+                        Without optional argument, password is read interactively.
+                        When specifying a password directly, enclose it in single quotes.
+  -g, updateGravity   Update the list of ad-serving domains
+  -h, --help, help    Show this help dialog
+  -l, logging         Specify whether the Pi-hole log should be used
+                        Add '-h' for more info on logging usage
+  -q, query           Query the adlists for a specified domain
+                        Add '-h' for more info on query usage
+  -up, updatePihole   Update Pi-hole subsystems
+                        Add '--check-only' to exit script before update is performed.
+  -v, version         Show installed versions of Pi-hole, Web Interface & FTL
+  uninstall           Uninstall Pi-hole from your system
+  status              Display the running status of Pi-hole subsystems
+  enable              Enable Pi-hole subsystems
+                        Add '-h' for more info on enable usage
+  disable             Disable Pi-hole subsystems
+                        Add '-h' for more info on disable usage
+  reloaddns           Update the lists and flush the cache without restarting the DNS server
+  reloadlists         Update the lists WITHOUT flushing the cache or restarting the DNS server
+  checkout            Switch Pi-hole subsystems to a different GitHub branch
+                        Add '-h' for more info on checkout usage
+  networkflush        Flush information stored in Pi-hole's network tables
+                        Add '--arp' to additionally flush the ARP table
+administrator@blaise:~ $ pihole setpassword
+  [✗] This Pi-hole command requires root privileges, try:
+      sudo pihole setpassword
+administrator@blaise:~ $ sudo pihole setpassword
+Enter New Password (Blank for no password):
+Not changed
+administrator@blaise:~ $ sudo pihole setpassword
+Enter New Password (Blank for no password):
+Not changed
+administrator@blaise:~ $ sudo pihole setpassword
+Enter New Password (Blank for no password):
+Confirm Password:
+  [✓] New password set
+administrator@blaise:~ $ sudo pihole -g
+  [✓] DNS resolution is available
+
+  [i] Neutrino emissions detected...
+
+  [✓] Preparing new gravity database
+  [✓] Creating new gravity databases
+  [✓] Pulling blocklist source list into range
+  [i] Using libz compression
+
+  [i] Target: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  [✓] Status: No changes detected
+  [✓] Parsed 101221 exact domains and 0 ABP-style domains (blocking, ignored 1 non-domain entries)
+      Sample of non-domain entries:
+        - fe80::1%lo0
+
+  [i] Target: https://blocklistproject.github.io/Lists/ads.txt
+  [✓] Status: Retrieval successful
+  [✓] Parsed 154554 exact domains and 0 ABP-style domains (blocking, ignored 0 non-domain entries)
+
+  [i] Target: https://blocklistproject.github.io/Lists/tracking.txt
+  [✓] Status: Retrieval successful
+  [✓] Parsed 15070 exact domains and 0 ABP-style domains (blocking, ignored 0 non-domain entries)
+
+  [✓] Building tree
+  [i] Number of gravity domains: 270845 (244853 unique domains)
+  [i] Number of exact denied domains: 0
+  [i] Number of regex denied filters: 0
+  [i] Number of exact allowed domains: 0
+  [i] Number of regex allowed filters: 0
+  [✓] Optimizing database
+  [✓] Swapping databases
+  [✓] The old database remains available
+  [✓] Cleaning up stray matter
+
+  [✓] Done.
+administrator@blaise:~ $ pihole status
+  [✓] FTL is listening on port 53
+     [✓] UDP (IPv4)
+     [✓] TCP (IPv4)
+     [✓] UDP (IPv6)
+     [✓] TCP (IPv6)
+
+  [✓] Pi-hole blocking is enabled
+administrator@blaise:~ $
